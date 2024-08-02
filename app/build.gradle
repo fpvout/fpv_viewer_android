@@ -16,17 +16,17 @@ android {
                 }
         }
     }
+    compileSdk 33
 
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId "com.fpvout.digiview"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 3
         versionName '1.0.0'
-        resConfigs "en", "de", "fr", "es", "zh", "pt"
+        resConfigs 'en', 'de', 'fr', 'es', 'zh', 'pt'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -61,6 +61,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.fpvout.digiview'
 }
 
 dependencies {
