@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements UsbDeviceListener
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         usbManager = (UsbManager) getSystemService(Context.USB_SERVICE);
-        permissionIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), 0);
+        permissionIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_IMMUTABLE);
         usbDeviceBroadcastReceiver = new UsbDeviceBroadcastReceiver(this);
 
         IntentFilter filter = new IntentFilter(ACTION_USB_PERMISSION);
