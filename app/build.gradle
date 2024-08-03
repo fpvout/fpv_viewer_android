@@ -17,17 +17,17 @@ android {
                 }
         }
     }
+    compileSdk 33
 
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId "com.fpvout.digiview"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 3
         versionName '1.0.0'
-        resConfigs "en", "de", "fr", "es", "zh", "pt"
+        resConfigs 'en', 'de', 'fr', 'es', 'zh', 'pt'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -62,18 +62,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.fpvout.digiview'
 }
 
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'com.google.android.exoplayer:exoplayer:2.16.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
     implementation 'io.sentry:sentry-android:4.3.0'
-    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.preference:preference:1.2.1'
 
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
